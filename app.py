@@ -28,3 +28,9 @@ db = DeepLake(dataset_path=dataset_path, embedding_function=embeddings)
 
 # add documents to our Deep Lake dataset
 db.add_documents(docs)
+
+retrieval_qa = RetrievalQA.from_chain_type(
+	llm=llm,
+	chain_type="stuff",
+	retriever=db.as_retriever()
+)
