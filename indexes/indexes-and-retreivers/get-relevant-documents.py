@@ -6,6 +6,9 @@ from langchain.vectorstores import DeepLake
 from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
 
+from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers.document_compressors import LLMChainExtractor
+
 
 # text to write to a local file
 # taken from https://www.theverge.com/2023/3/14/23639313/google-ai-language-model-palm-api-challenge-openai
